@@ -1,14 +1,14 @@
-import java.sql.Date;
+package Prestamos;
 
 public class Prestamos {
     private int id;
     private double monto;
-    private Date fechaOtorgamiento;
+    private String  fechaOtorgamiento;
     private double tasaInteres;
     private int plazo;
 
     // Constructor
-    public Prestamos(int id, double monto, Date fechaOtorgamiento, double tasaInteres, int plazo) {
+    public Prestamos(int id, double monto, String fechaOtorgamiento, double tasaInteres, int plazo) {
         this.id = id;
         this.monto = monto;
         this.fechaOtorgamiento = fechaOtorgamiento;
@@ -47,11 +47,11 @@ public class Prestamos {
         this.monto = monto;
     }
 
-    public Date getFechaOtorgamiento() {
+    public String getFechaOtorgamiento() {
         return fechaOtorgamiento;
     }
 
-    public void setFechaOtorgamiento(Date fechaOtorgamiento) {
+    public void setFechaOtorgamiento(String fechaOtorgamiento) {
         this.fechaOtorgamiento = fechaOtorgamiento;
     }
 

@@ -1,4 +1,6 @@
-import java.sql.Date;
+package Prestamos;
+
+import Prestamos.Prestamos;
 
 public class PrestamoVivienda extends Prestamos {
     private String tipoVivienda;
@@ -7,7 +9,7 @@ public class PrestamoVivienda extends Prestamos {
     private double porcentajeFinanciado;
 
     // Constructor
-    public PrestamoVivienda(int id, double monto, Date fechaOtorgamiento, double tasaInteres, int plazo, String tipoVivienda, String ciudad, double valorVivienda, double porcentajeFinanciado) {
+    public PrestamoVivienda(int id, double monto, String fechaOtorgamiento, double tasaInteres, int plazo, String tipoVivienda, String ciudad, double valorVivienda, double porcentajeFinanciado) {
         super(id, monto, fechaOtorgamiento, tasaInteres, plazo);
         this.tipoVivienda = tipoVivienda;
         this.ciudad = ciudad;
