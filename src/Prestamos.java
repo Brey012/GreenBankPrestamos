@@ -30,8 +30,6 @@ public class Prestamos {
         return interesTotal;
     }
 
-
-
     // Getters and Setters
     public int getId() {
         return id;
