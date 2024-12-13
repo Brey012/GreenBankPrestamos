@@ -25,13 +25,13 @@ public class PrestamoVivienda extends Prestamos {
     }
 
     @Override
-    public double calcularCoutoMensual(double monto, double tasaInteres, int plazoMeses) {
-        return super.calcularCoutoMensual(monto, tasaInteres, plazoMeses);
+    public double calcularInteresTotal() {
+        return super.calcularInteresTotal();
     }
 
     @Override
-    public double calcularInteresTotal() {
-        return super.calcularInteresTotal();
+    public double calcularCuotaMensual() {
+        return super.calcularCuotaMensual();
     }
 
     // Getters and Setters

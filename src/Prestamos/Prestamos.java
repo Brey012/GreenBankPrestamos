@@ -1,6 +1,6 @@
 package Prestamos;
 
-public class Prestamos {
+public abstract class Prestamos {
     private int id;
     private double monto;
     private String  fechaOtorgamiento;
@@ -16,18 +16,20 @@ public class Prestamos {
         this.plazo = plazo;
     }
 
-    // Methods
-    public double calcularCoutoMensual(double monto, double tasaInteres, int plazoMeses) {
-        double tasaInteresMensual = tasaInteres / 12 / 100;
-        double coutoMensual = monto * tasaInteresMensual / (1 - Math.pow(1 + tasaInteresMensual, -plazoMeses));
-        return coutoMensual;
-    }
+    // Method
 
-    public  double calcularInteresTotal(){
-        double cuotaMensual = calcularCoutoMensual(monto, tasaInteres, plazo);
+    public double calcularInteresTotal() {
+        double cuotaMensual = calcularCuotaMensual();
         double montoTotalPagar = cuotaMensual * plazo;
         double interesTotal = montoTotalPagar - monto;
         return interesTotal;
+    }
+
+    public double calcularCuotaMensual() {
+        double tasaInteresMensual = this.tasaInteres / 12 / 100;
+        int plazoMeses = this.plazo;
+        double cuotaMensual = (this.monto * tasaInteresMensual * Math.pow(1 + tasaInteresMensual, plazoMeses)) / (Math.pow(1 + tasaInteresMensual, plazoMeses) - 1);
+        return cuotaMensual;
     }
 
     // Getters and Setters

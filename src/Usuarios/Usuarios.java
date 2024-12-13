@@ -1,7 +1,6 @@
-package Usuario;
+package Usuarios;
 
-class Usuario {
-
+public class Usuarios {
     private int idUsuario;
     private String nombre;
     private String apellido;
@@ -11,7 +10,7 @@ class Usuario {
     private String ultimoAcceso;
 
     // Constructor
-    public Usuario(int idUsuario, String nombre, String apellido, String email, String contrasena, String fechaRegistro, String ultimoAcceso) {
+    public Usuarios(int idUsuario, String nombre, String apellido, String email, String contrasena, String fechaRegistro, String ultimoAcceso) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,6 +20,8 @@ class Usuario {
         this.ultimoAcceso = ultimoAcceso;
     }
 
+
+    // Getters and Setters
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -76,30 +77,4 @@ class Usuario {
     public void setUltimoAcceso(String ultimoAcceso) {
         this.ultimoAcceso = ultimoAcceso;
     }
-    
-    public boolean iniciarSesion(String email, String contrasena) {
-        return this.email.equals(email) && this.contrasena.equals(contrasena);
-    }
-
-    public void cambiarContrasena(String nuevaContrasena) {
-        this.contrasena = nuevaContrasena;
-    }
-
-    public void recuperarContrasena(String email) {
-        if (this.email.equals(email)) {
-            System.out.println("Instrucciones enviadas a: " + email);
-        }
-    }
-
-    public void actualizarPerfil(String nuevoNombre, String nuevoApellido, String nuevoEmail) {
-        this.nombre = nuevoNombre;
-        this.apellido = nuevoApellido;
-        this.email = nuevoEmail;
-    }
-
-    public void eliminarCuenta() {
-        System.out.println("Cuenta eliminada para el usuario: " + this.nombre + " " + this.apellido);
-    }
-
-
 }

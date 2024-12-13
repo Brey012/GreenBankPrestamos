@@ -1,6 +1,6 @@
 package Prestamos;
 
-public class PrestamoPersonal extends Prestamos{
+public class PrestamoPersonal extends Prestamos {
     private String finalidad;
     private boolean garantia;
     private int plazoMaximo;
@@ -22,7 +22,15 @@ public class PrestamoPersonal extends Prestamos{
     }
 
     // Methods
-    // Implementar dos metodos, mora y pago
+
+    public double calcularMora(double monto, int diasAtraso) {
+        return monto * comisionMora * diasAtraso;
+    }
+
+    public double calcularPago(double monto, int plazoMeses) {
+        double cuotaMensual = calcularCoutoMensual(monto, tasaInteresMaxima, plazoMeses);
+        return cuotaMensual * plazoMeses + comisionApertura + (seguroVida ? 100 : 0);
+    }
 
     @Override
     public double calcularCoutoMensual(double monto, double tasaInteres, int plazoMeses) {
