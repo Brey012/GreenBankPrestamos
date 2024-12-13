@@ -23,23 +23,14 @@ public class PrestamoPersonal extends Prestamos {
 
     // Methods
 
-    public double calcularMora(double monto, int diasAtraso) {
-        return monto * comisionMora * diasAtraso;
-    }
-
-    public double calcularPago(double monto, int plazoMeses) {
-        double cuotaMensual = calcularCoutoMensual(monto, tasaInteresMaxima, plazoMeses);
-        return cuotaMensual * plazoMeses + comisionApertura + (seguroVida ? 100 : 0);
-    }
-
-    @Override
-    public double calcularCoutoMensual(double monto, double tasaInteres, int plazoMeses) {
-        return super.calcularCoutoMensual(monto, tasaInteres, plazoMeses);
-    }
-
     @Override
     public double calcularInteresTotal() {
         return super.calcularInteresTotal();
+    }
+
+    @Override
+    public double calcularCuotaMensual() {
+        return super.calcularCuotaMensual();
     }
 
 

@@ -22,14 +22,15 @@ public class PrestamoEmpresarial extends Prestamos {
 
     // Methods
 
-    @Override
-    public double calcularCoutoMensual(double monto, double tasaInteres, int plazoMeses) {
-        return super.calcularCoutoMensual(monto, tasaInteres, plazoMeses);
-    }
 
     @Override
     public double calcularInteresTotal() {
         return super.calcularInteresTotal();
+    }
+
+    @Override
+    public double calcularCuotaMensual() {
+        return super.calcularCuotaMensual();
     }
 
     // Getters and Setters

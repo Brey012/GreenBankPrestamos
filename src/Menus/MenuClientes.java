@@ -69,7 +69,19 @@ public class MenuClientes {
     }
 
     private void comprarPrestamo() {
-        Clientes cliente = new Clientes(0, "", "", "", "", "", "", 0, "", "", "", "");
-        cliente.comprarPrestamo();
+        System.out.println("Ingrese el email del cliente: ");
+        String email = scanner.nextLine();
+        Clientes cliente = null;
+        for (Clientes c : clientes) {
+            if (c.getEmail().equals(email)) {
+                cliente = c;
+                break;
+            }
+        }
+        if (cliente != null) {
+            new MenuPrestamos(cliente).mostrarMenu();
+        } else {
+            System.out.println("Cliente no encontrado.");
+        }
     }
 }

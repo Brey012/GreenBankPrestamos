@@ -37,9 +37,4 @@ public class MenuPrincipal {
             }
         } while (opcion != 3);
     }
-
-    public static void main(String[] args) {
-        MenuPrincipal menuPrincipal = new MenuPrincipal();
-        menuPrincipal.mostrarMenu();
-    }
 }

@@ -20,7 +20,6 @@ public class Usuarios {
         this.ultimoAcceso = ultimoAcceso;
     }
 
-
     // Getters and Setters
     public int getIdUsuario() {
         return idUsuario;

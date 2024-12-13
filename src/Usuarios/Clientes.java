@@ -26,6 +26,7 @@ public class Clientes extends Usuarios {
         this.segmento = segmento;
     }
 
+
     ArrayList<Clientes> clientes = new ArrayList<>();
 
     public void registrarCliente(Clientes cliente) {
@@ -87,6 +88,7 @@ public class Clientes extends Usuarios {
     public void addPrestamo(Prestamos prestamo) {
         prestamos.add(prestamo);
     }
+
 
     // Getters and Setters
     public int getIdCliente() {
